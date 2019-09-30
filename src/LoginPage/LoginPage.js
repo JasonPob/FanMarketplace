@@ -66,6 +66,7 @@ class LoginPage extends Component {
                             <div className="help-block">Username is required</div>
                         }
                     </div>
+                    <br></br>
                     <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
                         <label htmlFor="password">Password</label>
                         <input type="password" className="form-control" name="password" value={password} onChange={this.handleChange} />
