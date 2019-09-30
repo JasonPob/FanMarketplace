@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component} from 'react';
+import { Component } from 'react';
 import './LoginPage.css';
 
 // import { userService } from '../_services';
@@ -11,7 +11,15 @@ class LoginPage extends Component {
         // userService.logout();
 
         this.state = {
-            username: '',
+            username: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Username'
+                },
+                value: '',
+                required: true
+            },
             password: '',
             submitted: false,
             loading: false,
@@ -54,7 +62,7 @@ class LoginPage extends Component {
         return (
             <div className="col-md-6 col-md-offset-3">
                 <div className="alert alert-info">
-                    
+
                 </div>
                 <h2>Joole</h2>
                 <h3>Building Product Selection Platform </h3>
@@ -76,7 +84,7 @@ class LoginPage extends Component {
                     </div>
                     <div className="form-group">
                         <button className="btn btn-primary" disabled={loading}>Login</button>
-                        
+
                     </div>
                     {error &&
                         <div className={'alert alert-danger'}>{error}</div>
