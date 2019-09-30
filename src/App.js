@@ -1,7 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { LoginPage } from '../src/LoginPage/LoginPage';
+import {ProductIDNavbar} from '../src/components/ProductIDNavbar/ProductIDNavbar';
+import {Header} from '../src/components/Header/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
     render() {
@@ -11,10 +14,12 @@ class App extends React.Component {
                     <div className="col-sm-8 col-sm-offset-2">
                         <Router>
                             <div>
-                                <Switch>
+                                {/* <Switch> */}
                                 <Route path="/" component={LoginPage} />
                                 <Route path="/login" component={LoginPage} />
-                                </Switch>
+                                <Route path="/productID" component={ProductIDNavbar} />
+                                <Route path="/header" component={Header} />
+                                {/* </Switch> */}
                             </div>
                         </Router>
                     </div>
