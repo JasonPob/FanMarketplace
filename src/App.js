@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { LoginPage } from '../src/LoginPage/LoginPage';
 import {ProductIDNavbar} from '../src/components/ProductIDNavbar/ProductIDNavbar';
 import {Header} from '../src/components/Header/Header';
+import {ProductCard} from '../src/components/ProductCard/ProductCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
@@ -15,10 +16,11 @@ class App extends React.Component {
                         <Router>
                             <div>
                                 {/* <Switch> */}
-                                <Route path="/" component={LoginPage} />
+                                {/* <Route path="/" component={LoginPage} /> */}
                                 <Route path="/login" component={LoginPage} />
                                 <Route path="/productID" component={ProductIDNavbar} />
                                 <Route path="/header" component={Header} />
+                                <Route path="/productcard" component={ProductCard} />
                                 {/* </Switch> */}
                             </div>
                         </Router>
